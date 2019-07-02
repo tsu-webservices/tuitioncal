@@ -1,340 +1,62 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-    <script>
-    // <![CDATA[
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5BCGL5');
-    // ]]>
-    </script>
-    <title>Business Services - Tarleton State University</title>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="no-cache" http-equiv="cache-control"/>
-    <meta content="width=device-width" name="viewport"/>
-    <meta content="NOODP" name="robots"/>
-    <meta content="NOODP" name="googlebot"/>
-    <meta content="Fri, 25 Jan 2019 12:30:10 -0440" name="date"/>
-    <meta content="Business Services" name="keywords"/>
-    
-    
-<link href="//www.tarleton.edu/favicon.ico" rel="shortcut icon" type="image/x-icon"/><link href="//www.tarleton.edu/favicon.ico" rel="icon" type="image/x-icon"/><meta content="bf8a8307ac1e008e5e5404a1bc39664e" name="page-id"/>
-        <meta content="Business Services" name="DC.Subject.Keyword"/>
-<meta content="Homepages" name="DC.Type"/>
-<link content="http://www.tarleton.edu/business/index.html" rel="orginal-source"/>
-	<link href="http://www.tarleton.edu/business/index.html" rel="canonical"/>
-	<meta content="Business Services" property="og:title"/>
-	<meta content="website" property="og:type"/>
-	<meta content="Tarleton State University" property="og:site_name"/>
-	<meta content="http://www.tarleton.edu/business/index.html" property="og:url"/>
-    <meta content="https://www.tarleton.edu/common/_css/images/tarleton-sm-fb-rs.jpg" property="og:image"/>
-	<meta content="Business Services" name="twitter:title"/>
-	<meta content="summary_large_image" name="twitter:card"/>
-	<meta content="@tarletonstate" name="twitter:site"/>
-    
-    
-    
-    
-        
-        <link href="//www.tarleton.edu/common/_css/full-sass.css" rel="stylesheet" type="text/css"/>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        
-        <script src="//www.tarleton.edu/common/_script/lazy/lazy-sass.js"></script>
-    
-        
-        <script src="//www.tarleton.edu/common/_script/sliderific/sliderific-sass.js"></script>
-    
-        
-        <script src="//www.tarleton.edu/common/_script/collapsify/collapsify-sass.js"></script>
-    
-        
-        <script src="//www.tarleton.edu/common/_script/datatables/datatables-sass.js"></script>
-    
-        
-        <script src="//www.tarleton.edu/common/_script/default-sass.js"></script>
-    
-    
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body onload="hideTotal()">
+  	<div id="wrap">
+  		<form action="" id="tuitionestimator" onsubmit="return false;">
+  			<div>
+  				<div class="cont_order">
+  					<h1>Tuition Estimator</h1>
+  					<!--------------SEMESTER RADIO SELECTION---------------->
+  					<fieldset class="hidden">
+  					<label>Semester:</label><br/>
+  					<label class=""><input type="radio" name="selectedsemester" value="SemesterFall" onclick="calculateTotal()"/>Fall </label><br/>
+  					<label class=""><input type="radio" name="selectedsemester" value="SemesterSpring" onclick="calculateTotal()"/>Spring </label><br/>
+  					<label class=""><input type="radio" name="selectedsemester" value="SemesterSummer" onclick="calculateTotal()"/>Summer </label>
+  					<br/>
+  					</fieldset>
 
-</head>
-<body>
-<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5BCGL5" style="display:none;visibility:hidden" width="0"></iframe></noscript>
-<a class="screenreader-only" href="#skiptocontent">Skip to page content</a>
-<div class="off-canvas-slider">
-  <div class="mobile-audience-menu dark-gray" role="navigation">
-    <div id="global_nav">
-      <h1>I am a(n)<span class="mobile-audience-menu-show close-menu float-right" title="Close Menu">&#160;<span class="screenreader-only">Close Audience Menu</span></span></h1><ul role="menu"><li role="presentation"><a href="//www.tarleton.edu/currentstudents/index.html" role="menuitem"> Student</a></li><li role="presentation"><a href="http://www.tarleton.edu/facultystaff/" role="menuitem"> Faculty / Staff</a></li><li role="presentation"><a href="http://www.tarleton.edu/alumniengagement/" role="menuitem"> Alum</a></li><li role="presentation"><a href="http://www.tarleton.edu/visitors/" role="menuitem"> Visitor</a></li><li role="presentation"><a href="http://www.tarleton.edu/family/" role="menuitem"> Parent</a></li><li role="presentation"><a href="http://www.tarleton.edu/international/" role="menuitem"> International Student</a></li><li role="presentation"><a href="//www.tarleton.edu/employment/index.html" role="menuitem"> Job Seeker</a></li></ul>
-    </div>
-  </div>
-  <div class="section clearfix floating-search" role="search">
-      
-     <div class="col cu12 floating-search-controls">
-        <form class="floating-search-form form-search"><input class="floating-search-go-input" type="button" value="&#xe07f;"/>
-          <label class="hidden" for="floating-search-input">Search</label>
-          <input class="search-box" id="floating-search-input" placeholder="Search"/>
-          <input class="floating-search-reset-input" title="Reset" type="reset" value="&#xe0fa;"/></form>
-          <a class="floating-search-show cancel-form search-cancel" href="#" role="button" title="Cancel">Cancel</a>
-      </div>
-      <div class="col cu12 floating-search-results">
-        <p> </p>
-      </div>
+  					<!--------------STUDENT TYPE SELECTION---------------->
+  					<fieldset>
+  					<label>What type of student are you?</label><br/>
+  					<label class=""><input type="radio" name="selectedstudent" value="NewStudent" onclick="calculateTotal()">New Student</label>
+  					<label class=""><input type="radio" name="selectedstudent" value="ContinueStudent" onclick="calculateTotal()">Continuing Student</label>
+  					<br/>
+  					</fieldset>
 
-  </div>
-  <div id="main">
-    <div class="clearfix footer desktop-hide mobile-sticky-header dark-gray" role="navigation">
-      <div class="wrapper">
-        <div class="cu12 col desktop-hide center">
-          
-    <div class="col cu3-static mobile-audience-menu-show">
-        <div role="button"><span data-icon="&#xe071;">&#160;</span><span class="screenreader-only">I am a(n)</span></div>
-    </div>
-    <div class="col cu6-static search-box">
-        <div role="button"><span data-icon="&#xe07f;">&#160;</span><span class="screenreader-only">Search</span></div>
-    </div>
-    <div class="col cu3-static mobile-main-menu-show">
-        <div role="button"><span data-icon="&#xe0b8;">&#160;</span><span class="screenreader-only">Menu</span></div>
-    </div>
+  					<!--------------TUITION TYPE SELECTION---------------->
+  					<fieldset>
+  						<label>Tuition type: </label><br/>
+  						<label><input type="radio" name="selectedtuition" value="VariableTuition" onclick="calculateTotal()"/>Variable Tuition</label>
+  						<label><input type="radio" name="selectedtuition" value="VariableTuition" onclick="calculateTotal()">Guaranteed Tuition</label>
+  						<br/>
+  					</fieldset>
 
-        </div>
-      </div>
-    </div>
-    <div class="clearfix mobile-logo-header purple" role="banner">
-      <div class="cu12">
-        <div class="no-margin flag-drop-overlap"><a href="http://www.tarleton.edu/"><img alt="Tarleton State University, Member of The Texas A&amp;M University System" src="//www.tarleton.edu/common/_css/images/tarleton-horizontal-logo-external.png"/></a></div>
-      </div>
-    </div>
-    <div class="clearfix mobile-hide mini-hide tablet-hide sticky-header" role="banner">
-      <div class="cu12 purple">
-        <div class="col cu4-static no-margin flag-drop-overlap"><a href="http://www.tarleton.edu/"><img alt="Tarleton State University, Member of The Texas A&amp;M University System" class="tsu-header-name" src="//www.tarleton.edu/common/_css/images/tarleton-horizontal-logo-external.png"/></a></div>
-        <div class="cu8-static text-right panel-right">
-          <div class="cus12 top-nav-panel" role="navigation">
-            <ul class="inline transition" role="menubar">
-              
-    <li><a href="//www.tarleton.edu/az.html" role="menuitem">A-Z Directory</a></li>
-    <li><a href="//www.tarleton.edu/common/links/calendars.html" role="menuitem">Calendar</a></li>
-    <li><a href="//www.tarleton.edu/common/links/campusmap.html" role="menuitem">Maps</a></li>
-    <li><a href="//www.tarleton.edu/common/links/virtualtour.html" role="menuitem">Virtual Tour</a></li>
-    <li><span class="nav-show top-nav-login-box" role="menuitem" title="Login">Login</span>
-        <div class="sub-nav">
-          <ul role="menu">
-            <li role="presentation"><a class="gateway" href="//www.tarleton.edu/common/links/mygateway.html" role="menuitem"><span data-icon="&#xe0c1;" title="myGateway"></span> myGateway</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/common/links/academic/blackboard.html" role="menuitem"><span data-icon="&#xe005;" title="BlackBoard"></span> BlackBoard</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/common/links/student/parent-portal.html" role="menuitem"><span data-tsu-icon="&#58911;" title="Parent Portal"></span> Parent Portal</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/portfolium" role="menuitem"><span data-icon="&#57513;" title="Portfolium"></span> Portfolium</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/common/links/password.html" role="menuitem"><span data-icon="&#57479;" title="Reset Password"></span> Reset Password</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/technology/email.html" role="menuitem"><span data-icon="&#xe040;" title="Student Email"></span> Student Email</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/ssc" role="menuitem"><span data-icon="&#57466;" title="EAB Navigate"></span> EAB Navigate</a></li>
-            <li role="presentation"><a href="//www.tarleton.edu/common/links/student/orgsync.html" role="menuitem"><span data-icon="&#xe07c;" title="TexanSync"></span> TexanSync</a></li>
-          </ul>
-        </div>
-    </li> 
+  					<!--------------COURSE HOURS SELECTION---------------->
+  					<fieldset>
+  						<label>Hours: </label><br/>
+  						<input type="range" list="tickmarks" id="hourSelected" min="3" max="18" value="12" onclick="calculateTotal()">
+  						<datalist>
+  							<option value="Hours3" label="3">
+  							<option value="Hours6">
+  							<option value="Hours9">
+  							<option value="Hours12" label="12">
+  							<option value="Hours15">
+  							<option value="Hours18" label="18">
+  						</datalist>
+  					</fieldset>
 
-            </ul>
-          </div>
-          <div class="cus12 top-search-panel text-right panel-right">
-            <div class="mobile-hide mini-hide panel-right cu4-tablet transition"><ul role="menubar"><li><div class="nav-show"><span class="i-am-a-audience-box" role="menuitem">I am a(n)</span></div><div class="sub-nav"><ul role="menu"><li role="presentation"><a href="//www.tarleton.edu/currentstudents/index.html" role="menuitem"> Student</a></li><li role="presentation"><a href="http://www.tarleton.edu/facultystaff/" role="menuitem"> Faculty / Staff</a></li><li role="presentation"><a href="http://www.tarleton.edu/alumniengagement/" role="menuitem"> Alum</a></li><li role="presentation"><a href="http://www.tarleton.edu/visitors/" role="menuitem"> Visitor</a></li><li role="presentation"><a href="http://www.tarleton.edu/family/" role="menuitem"> Parent</a></li><li role="presentation"><a href="http://www.tarleton.edu/international/" role="menuitem"> International Student</a></li><li role="presentation"><a href="//www.tarleton.edu/employment/index.html" role="menuitem"> Job Seeker</a></li></ul></div></li></ul></div>
-          </div>
-        </div>
-      </div>
-      <div class="cu12 mobile-hide mini-hide tablet-hide nav dark-gray" role="navigation">
-        <div class="center">
-          <div class="panel-center">
-            
-    <ul>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/becomeatexan/degrees.html">Academics</a></div>
-            <div class="sub-nav dyn-menu" id="component-desktop-academics-panel">
-            </div>
-            </li>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/about/index.html">About Us</a></div>
-            <div class="sub-nav dyn-menu" id="component-desktop-about-us-panel">
-            </div>
-        </li>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/admissions/">Admissions</a></div>
-            <div class="sub-nav dyn-menu" id="component-desktop-admissions-panel">
-            </div>
-        </li>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/common/links/athletics.html">Athletics</a></div>
-        </li>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/giving/">Giving</a></div>
-        </li>
-        <li>
-            <div class="nav-show"><a href="//www.tarleton.edu/veterans/index.html">Veterans</a></div>
-        </li>
-    </ul>
-
-          </div>
-        </div>
-      </div>
-    </div>   
-    <div class="section clearfix white no-icons" id="bread-crumb-nav"><div class="col cu12"><p><a href="//www.tarleton.edu/home/index.html"><span class="bread-crumb-home"><span class="screenreader-only">Tarleton's Home Page</span></span></a><span class="bread-crumb-divider"></span><a class="bread-crumb-current-page" href="index.html">Business Services</a></p></div></div>
-    <div class="section section-right-nav clearfix"> 
-        <div class="cu12 cu9-desktop" id="main-content-left">
-          <h1>
-            Tuition Calculator
-          </h1>
-          <div class="main-content" id="skiptocontent" role="main">
-            <div id="article-start"></div>
-            <form>
-              <!-----SEMESTER--------------------------------------------------------->
-              <div id="semesterDiv" class="formControlDiv">  
-                <label for="semester">Semester :</label>                               
-                  <p class="radio-inline"><input type="radio" value="fallSpring2019">Spring 2019</p>
-									<p class="radio-inline"><input type="radio" value="summer2019">Summer 2019</p>
-									<p class="radio-inline"><input type="radio" value="fallSpring2020">Fall 2019 or Spring 2020</p>                                    
-                </div>
-              
-              <!-----CLASSIFICATION--------------------------------------------------------->
-              <div id="classificationDiv" class="formControlDiv">
-                  <label title="Note:for undergraduate students, 12 SCH is considered full time and 6 SCH is considered part-time." class="tip" for="classification">
-                  Classification :</label>
-                    <select class="formControl" id="classification">
-                      <option value=""></option>
-                      <option value="0">Freshman</option>
-                      <option value="1">Sophomore</option>
-                      <option value="2">Junior</option>
-                      <option value="3">Senior</option>
-                      <option value="4">Graduate</option>   
-                    </select>                
-                </div>  
-              
-              <!-----RESIDENCY---------------------------------------------------------
-              <div id="residencyDiv" class="formControlDiv"> 
-               <label for="residency">Residency :</label>
-                  <select class="formControl" id="residency">
-                    <option value=""></option>
-                    <option value="inState">In State</option> 
-                    <option value="OutOfState">Out of State</option>  
-                    <option value="International">International</option>   
-                  </select>                      
-              </div>
-              
-              <!-----FIRST TIME---------------------------------------------------------
-              <div id="firstTimeDiv" class="formControlDiv"> 
-                <label for="firstTime">First Semester at Tarleton :</label>
-                  <select class="formControl" id="firstTime">
-                    <option value=""></option>
-                    <option value="yes">yes</option> 
-                    <option value="no">no</option>  
-                  </select>                      
-              </div> 
-              
-              <!-----TUITION PLAN-VARIABLE--------------------------------------------------------->
-              <div id="variableDiv" class="formControlDiv"> 
-               <label for="variable">Tuition Plan :</label>
-                  <select class="formControl" id="variable">
-                    <option value=""></option>
-                    <option value="variable">Variable</option> 
-                    <option value="guaranteed">Guaranteed</option>  
-                  </select>                  
-              </div>
-              
-              <!-----CAMPUS--------------------------------------------------------->
-              <div id="campusDiv" class="formControlDiv">  
-                <label for="campus" class="tip" title="Campus: You may take classes in Stephenville, Fort Worth, Weatherford, Waco, Midlothian, Cleburne, and online (distance learning.)  Learn more about our <a href=http://www.tarleton.edu/locationsmap.html target=_blank>locations</a> or <a href=http://www.tarleton.edu/globalcampus/index.html target=_blank>distance learning</a> A student has to qualify for distance learner status in order to be charged as a Distance Learner. To apply for Distance Learner status, fill out the <a href=http://www.tarleton.edu/common/links/academic/campus-update-request-form.html target=_blank>Campus Update Request Form</a>. For more information, please email <a href=mailto:registrar@tarleton.edu target=_blank>registrar@tarleton.edu</a>.">
-                    Campus :</label>
-                  <select class="formControl" id="campus">
-                    <option value=""></option>
-                    <option value="stephenville">Stephenville</option>
-                    <option value="fortworth">Fort Worth</option>  
-                    <option value="othercampus">Other Campus</option> 
-                    <option value="online" id="online-campus">Distance Learner<strong>*</strong></option>   
-                  </select>                                     
-              </div>
-              
-              <!-----DELIVERY METHOD--------------------------------------------------------->
-              <div id="lsDiv" class="formControlDiv subClass">
-                <label for="ls" class="tip" title="Delivery Method: Depending on availability, you may enroll in face-to-face lecture classes or online classes.  There are additional fees associated with online classes.">
-                  Delivery Method :</label>
-                  <select id="ls" class="formControl">
-                    <option value="none"></option>
-                    <option value="online">Online</option> 
-                    <option value="inperson">In Person</option>   
-                  </select>  
-              </div> 
-              
-              <!-----HOUSING-MEAL PLANS---------------------------------------------------------
-              <div id="svilleDiv" class="subClass">
-                
-                  <div id="housingDiv">
-                        <label for="housing" class="tip" title="Housing: To learn more about the residential facilities, visit the <a href=http://www.tarleton.edu/housing/facilities.html target=_blank>Residential Living &amp; Learning website</a>."><img style="margin-bottom: -5px;" src="/_graphics/icons/question_icon.png" /> Housing :</label>
-                        <select id="housing" name="mealplan">
-                            <option value=""></option>
-                        </select>  
-                    </div>              
-                    
-                    <div id="mealPlanDiv">                
-                        <label for="mealplan" class="tip" title="Meal Plan: To learn more about the meal plans, visit the <a href=http://www.tarletondiningservices.com/ target=_blank>Dining Services website</a>."><img style="margin-bottom: -5px;" src="/_graphics/icons/question_icon.png" /> Meal Plan :</label>
-                        <select id="mealplan" name="housing">
-                            <option value=""></option>
-                        </select>
-                    </div>
-              </div>
-              
-              <!-----SUBMIT BUTTONS--------------------------------------------------------->
-              <div id="submitDiv">
-                <input id="submit" type="button" class="u12-mobile cu4 button-box purple col short-button" value="Submit"/>   
-              </div>
-              <br>
-            </form>
-            
-            <!----RESULT TABLE--------------------------------------------------------->
-            <div id="tuitioncal">
-              <table id="estTable">     
-                  <tr><th>Hours</th>
-                        <th>Base Tuition</th>
-                        <th class="mobileHide">Fees</th>
-                        <th class="mobileHide">Housing</th>
-                        <th class="mobileHide">Meal Plan</th>
-                        <th>Total</th>
-                  </tr>          
-              </table>           
-            </div>
-            
-            <!----CAUTIONS--------------------------------------------------------->
-            <div class="caution" id="cinfo">            
-                <p>
-                  All fees are approximations and subject to change because of economic conditions, board action, and/or legislative requirements
-                </p>
-                
-                <p>
-                  The estimate also does not include lab fees that are course specific. Tuition Differentials will be charged to courses as follows: all courses in the College of Business, College of Agricultural and Environmental Sciences, College of Liberal and Fine Arts, College of Education, College of Science and Technology and College of Health Science and Human Service.  Nursing/Medical Lab Sciences/Social Work, Criminology and Engineering Courses will also have additional Tuition Differentials over and above their College Differentials. The tuition estimate includes an average tuition differential and will vary based on course enrollment.
-                </p>
-            </div>
-            
-            
-            <div id="article-end"></div>
-          </div>
-        </div>
-        <div id="right-navigation" role="navigation">
-          <div class="col cu3">
-            
-            <div class="mobile-hide mini-hide tablet-hide"><div class="gray-module"><h1 class="main-website-link current-website-link"><a class="current-website-link" href="index.html" role="menuitem">Business Services</a></h1><ul class="right-menu" role="menu"><li role="presentation"><a class="nav-show" href="#" role="menuitem" title="Expand or Contract Menu"> <span class="with-sub-nav">Students</span></a><ul class="sub-nav" role="menu"><li role="presentation"><a href="students/index.html" role="menuitem">Overview</a></li><li role="presentation"><a href="students/tuition-rate-plans.html" role="menuitem">Tuition and Fee Plans</a></li><li role="presentation"><a href="students/payment-options-and-dates.html" role="menuitem">Payment Options and Dates</a></li><li role="presentation"><a href="students/refund-options.html" role="menuitem">Tarleton Refund Options </a></li><li role="presentation"><a href="students/taxinfo.html" role="menuitem">Tax Information </a></li><li role="presentation"><a href="students/american-opportunity-credit.html" role="menuitem">American Opportunity Credit</a></li><li role="presentation"><a href="students/texas-tuition-fund.html" role="menuitem">Texas Tuition Fund Information</a></li><li role="presentation"><a href="students/short-term-loans.html" role="menuitem">Short-term Loans </a></li><li role="presentation"><a href="students/texan-bill-pay.html" role="menuitem">Texan Bill Pay </a></li><li role="presentation"><a href="students/student-fees.html" role="menuitem">Student Fees</a></li><li role="presentation"><a href="students/support.html" role="menuitem">Student Support </a></li></ul></li><li role="presentation"><a class="nav-show" href="#" role="menuitem" title="Expand or Contract Menu"> <span class="with-sub-nav">Faculty &amp; Staff</span></a><ul class="sub-nav" role="menu"><li role="presentation"><a href="facultystaff/index.html" role="menuitem">Overview</a></li><li role="presentation"><a href="facultystaff/accts-payable.html" role="menuitem">Accounts Payable</a></li><li role="presentation"><a href="facultystaff/travel.html" role="menuitem">Travel</a></li><li role="presentation"><a href="facultystaff/training.html" role="menuitem">Training</a></li><li role="presentation"><a href="facultystaff/procurementcards.html" role="menuitem">Procurement Cards </a></li><li role="presentation"><a href="facultystaff/accounting.html" role="menuitem">Accounting</a></li><li role="presentation"><a href="facultystaff/departmental-deposits.html" role="menuitem">Departmental Deposits</a></li><li role="presentation"><a href="facultystaff/budget-services.html" role="menuitem">Budget Services</a></li></ul></li></ul></div></div>
-            <div class="cu12-mini gray-module" role="menu"><h1 class="main-title-heading">Contact Info</h1><div class="partition"><a class="nav-show" href="#" role="menuitem" title="Expand or Contract Menu"> <span class="with-sub-nav">Office of Business Services</span></a><div class="sub-nav" role="menu"><div class="col cu12-mobile cu12-desktop"><div class="margin-block"><h2>Main Office</h2><p><a href="http://map.tarleton.edu/map/?id=302&amp;mrkIid=70989"> <span>Administration Building, Room 122 </span></a></p><p><a class="mailingaddress" href="http://map.tarleton.edu/map/?id=302&amp;mrkIid=70989"> <span>Box T-0120
-Stephenville, TX 76402</span></a></p><p><a href="tel:+12549689107"> <span>254-968-9107</span></a></p><p><a class="faxnumber" href="tel:+12549689438"> <span>254-968-9438</span></a></p><p><a href="mailto:businessofc@tarleton.edu"> <span>Email Main Office</span></a></p></div></div></div></div></div>
-          </div>
-        </div>
-    </div>
-     
-    <div class="section clearfix footer dark-gray" role="contentinfo"><div class="col cu6"><div class="tsu-seal"><div class="col cu6 dyn-menu" id="component-footer-left-image">&#160;</div></div><div class="tsu-seal-nav"><div class="col cu6 footer-main-menu"><ul class="dyn-menu" id="component-footer-left-menu" role="menu">&#160;</ul></div></div></div><div class="col cu6"><div class="member-TAMU"><div class="panel-right cu6 dyn-menu" id="component-footer-right-image">&#160;</div></div><div class="member-TAMU-nav"><div class="col cu6 footer-main-menu"><ul class="dyn-menu" id="component-footer-right-menu" role="menu">&#160;</ul><ul role="menu"><li role="presentation"><a class="feedback" href="http://tarleton.wufoo.com/forms/mwy0z8y1tqzu9b/def/field15=www.tarleton.edu/business/index.html" role="menuitem">Submit Website Feedback</a></li></ul></div></div></div></div>
-  </div>
-  
-     <div class="col cu2-static to-top"><span class="top-of-page" title="Top of Page">&#160;</span></div>
-
-  <div class="mobile-main-menu dark-gray tablet-hide desktop-hide" role="navigation">
-    <div id="global-menu-nav">
-      <h1>Sub Menu<span class="mobile-main-menu-show close-menu float-right" title="Close Menu">&#160;</span></h1><ul role="menu"><li role="presentation"><a class="main-title-heading current-website-link" href="index.html" role="menuitem"> <span class="with-sub-nav">Business Services</span></a></li><li role="presentation"><a class="nav-show" href="#" role="menuitem" title="Expand or Contract Menu"> <span class="with-sub-nav">Students</span></a><ul class="sub-nav" role="menu"><li role="presentation"><a href="students/index.html" role="menuitem">Overview</a></li><li role="presentation"><a href="students/tuition-rate-plans.html" role="menuitem">Tuition and Fee Plans</a></li><li role="presentation"><a href="students/payment-options-and-dates.html" role="menuitem">Payment Options and Dates</a></li><li role="presentation"><a href="students/refund-options.html" role="menuitem">Tarleton Refund Options </a></li><li role="presentation"><a href="students/taxinfo.html" role="menuitem">Tax Information </a></li><li role="presentation"><a href="students/american-opportunity-credit.html" role="menuitem">American Opportunity Credit</a></li><li role="presentation"><a href="students/texas-tuition-fund.html" role="menuitem">Texas Tuition Fund Information</a></li><li role="presentation"><a href="students/short-term-loans.html" role="menuitem">Short-term Loans </a></li><li role="presentation"><a href="students/texan-bill-pay.html" role="menuitem">Texan Bill Pay </a></li><li role="presentation"><a href="students/student-fees.html" role="menuitem">Student Fees</a></li><li role="presentation"><a href="students/support.html" role="menuitem">Student Support </a></li></ul></li><li role="presentation"><a class="nav-show" href="#" role="menuitem" title="Expand or Contract Menu"> <span class="with-sub-nav">Faculty &amp; Staff</span></a><ul class="sub-nav" role="menu"><li role="presentation"><a href="facultystaff/index.html" role="menuitem">Overview</a></li><li role="presentation"><a href="facultystaff/accts-payable.html" role="menuitem">Accounts Payable</a></li><li role="presentation"><a href="facultystaff/travel.html" role="menuitem">Travel</a></li><li role="presentation"><a href="facultystaff/training.html" role="menuitem">Training</a></li><li role="presentation"><a href="facultystaff/procurementcards.html" role="menuitem">Procurement Cards </a></li><li role="presentation"><a href="facultystaff/accounting.html" role="menuitem">Accounting</a></li><li role="presentation"><a href="facultystaff/departmental-deposits.html" role="menuitem">Departmental Deposits</a></li><li role="presentation"><a href="facultystaff/budget-services.html" role="menuitem">Budget Services</a></li></ul></li></ul>
-      
-    <h1>Main Menu<span class="mobile-main-menu-show close-menu float-right" title="Close Menu">&#160;<span class="screenreader-only remove-text">Close Main Menu</span></span></h1>
-    <ul class="dyn-menu" id="component-mobile-main-menu" role="menu"></ul>
-
-    </div>
-  </div>  
-</div>
-
-
-
-</body>
+  					<p>Tuition Total: </p>
+  					<div id="totalPrice"></div>
+  					
+  				</div>
+  				 <input type='submit' id='submit' value='Submit' onclick="calculateTotal()" />
+  			</div>
+  		</form>
+  	</div>
+  </body>
 </html>
