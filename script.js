@@ -42,6 +42,9 @@ function getSelectedSemesterPrice() {
 	return selectedSemesterPrice;
 }
 
+function displayHoursSelected(val) {
+          document.getElementById('textInput').value=val; 
+}
 
 function getSelectedHoursFee(){
 	var selectedHoursFee=0;

@@ -48,6 +48,11 @@
   							<option value="Hours15">
   							<option value="Hours18" label="18">
   						</datalist>
+
+
+              <input type="range" list="tickmarks" id="hourSelected" min="3" max="18" value="12" onchange="displayHoursSelected(this.value);">
+              <input type="text" id="textInput" value="">
+
   					</fieldset>
 
   					<p>Tuition Total: </p>
